@@ -1,19 +1,19 @@
 {
-  "name": "env-test-e2e",
+  "name": "rename-me-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/env-test-e2e/src",
+  "sourceRoot": "apps/rename-me-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/env-test-e2e/cypress.config.ts",
-        "devServerTarget": "env-test:serve:development",
+        "cypressConfig": "apps/rename-me-e2e/cypress.config.ts",
+        "devServerTarget": "rename-me:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "env-test:serve:production"
+          "devServerTarget": "rename-me:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/env-test-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/rename-me-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["env-test"]
+  "implicitDependencies": ["rename-me"]
 }

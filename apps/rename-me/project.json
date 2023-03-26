@@ -1,7 +1,7 @@
 {
-  "name": "env-test",
+  "name": "rename-me",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/env-test/src",
+  "sourceRoot": "apps/rename-me/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/env-test"
+        "outputPath": "dist/apps/rename-me"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nrwl/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "env-test:build"
+        "buildTarget": "rename-me:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "env-test:build:development",
+          "buildTarget": "rename-me:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "env-test:build:production",
+          "buildTarget": "rename-me:build:production",
           "hmr": false
         }
       }
@@ -41,30 +41,30 @@
       "executor": "@nrwl/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "env-test:build"
+        "buildTarget": "rename-me:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "env-test:build:development"
+          "buildTarget": "rename-me:build:development"
         },
         "production": {
-          "buildTarget": "env-test:build:production"
+          "buildTarget": "rename-me:build:production"
         }
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/apps/env-test"],
+      "outputs": ["coverage/apps/rename-me"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/env-test"
+        "reportsDirectory": "../../coverage/apps/rename-me"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/env-test/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/rename-me/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

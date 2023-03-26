@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
+      "@mytest/utils": ["libs/env-utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
