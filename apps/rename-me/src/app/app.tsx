@@ -16,12 +16,7 @@ function App() {
       <BrowserRouter>
         <Layout
           header={<Header />}
-          content={
-            <Content routes={routes}>
-              <h2>Content Banner</h2>
-              <p> some content description here</p>
-            </Content>
-          }
+          content={<Content routes={routes}></Content>}
           footer={<Footer />}
         />
       </BrowserRouter>

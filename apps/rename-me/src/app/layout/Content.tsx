@@ -7,9 +7,6 @@ import SideDrawer from './SideDrawer';
 const StyledContent = styled(Box)({
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  paddingBottom: '2rem',
   flex: 1,
 });
 
