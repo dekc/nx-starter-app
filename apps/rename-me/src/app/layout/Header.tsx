@@ -18,7 +18,7 @@ const TITLE = import.meta.env.VITE_TITLE ?? 'rename-me';
 const StyledHeader = styled(Box)(({ theme }) => ({
   position: 'sticky',
   top: 0,
-  backgroundColor: '#fff',
+
   zIndex: 1,
   ...theme.mixins.toolbar,
 }));

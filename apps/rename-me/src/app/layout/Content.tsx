@@ -5,18 +5,23 @@ import { AppRoute, AppRoutes } from '../routes/AppRoutes';
 import SideDrawer from './SideDrawer';
 
 const StyledContent = styled(Box)({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  paddingBottom: '2rem',
   flex: 1,
 });
 
 interface ContentProps {
   routes?: AppRoute[];
-  main?: ReactNode;
+  children?: ReactNode;
 }
 
-const Content = ({ routes = [], main = null }: ContentProps) => {
+const Content = ({ routes = [], children = null }: ContentProps) => {
   return (
     <StyledContent>
-      <main>{main}</main>
+      <main>{children}</main>
       <AppRoutes routeList={routes} />
       <SideDrawer routeList={routes} />
     </StyledContent>

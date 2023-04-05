@@ -1,20 +1,19 @@
-import { Box, Paper, Toolbar, useTheme } from '@mui/material';
-import { styled } from '@mui/system';
+import { Box, Paper, Toolbar, styled } from '@mui/material';
 import { useInstance } from 'react-ioc';
 import { ThemeDataStore } from '../theme/ThemeDataStore';
 import { observer } from 'mobx-react-lite';
 
-const StyledFooter = styled(Box)(({ theme }) => {
-  console.log(theme);
-  return {
-    position: 'sticky',
-    bottom: 0,
-    zIndex: 1,
-  };
-});
+const StyledFooter = styled(Box)(({ theme }) => ({
+  position: 'fixed',
+  bottom: 0,
+  zIndex: 1,
+  height: '64px',
+  width: '100%',
+  opacity: 0.5,
+  borderTop: `2px solid ${theme.palette.primary.main}`,
+}));
 
 const Footer = () => {
-  const theme = useTheme();
   const themeDataStore = useInstance(ThemeDataStore);
 
   console.log(themeDataStore.mode);

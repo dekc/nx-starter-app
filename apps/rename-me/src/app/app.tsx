@@ -10,23 +10,22 @@ import { ThemeDataStore } from './theme/ThemeDataStore';
 import { AppDataStore } from './stores/AppDataStore';
 import { routes } from './routes';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
-
 function App() {
   return (
-    <StyledApp>
-      <Theme>
-        <BrowserRouter>
-          <Layout
-            header={<Header />}
-            content={<Content routes={routes} />}
-            footer={<Footer />}
-          />
-        </BrowserRouter>
-      </Theme>
-    </StyledApp>
+    <Theme>
+      <BrowserRouter>
+        <Layout
+          header={<Header />}
+          content={
+            <Content routes={routes}>
+              <h2>Content Banner</h2>
+              <p> some content description here</p>
+            </Content>
+          }
+          footer={<Footer />}
+        />
+      </BrowserRouter>
+    </Theme>
   );
 }
 

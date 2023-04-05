@@ -3,8 +3,8 @@ import { Box, styled } from '@mui/material';
 
 const StyledContainer = styled(Box)({
   display: 'flex',
+  height: '100%',
   flexDirection: 'column',
-  minHeight: '100vh',
 });
 
 interface LayoutProps {
@@ -21,7 +21,6 @@ const Layout = ({ header, content, footer }: LayoutProps) => {
   return (
     <StyledContainer>
       {showHeader && header}
-
       {showContent && content}
       {showFooter && footer}
     </StyledContainer>
