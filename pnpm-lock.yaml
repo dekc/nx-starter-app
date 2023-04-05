@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@deck.gl/layers': ^8.9.4
+  '@deck.gl/mapbox': ^8.9.6
   '@deck.gl/react': ^8.9.4
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
@@ -61,6 +62,7 @@ specifiers:
 
 dependencies:
   '@deck.gl/layers': 8.9.4_xckiajrjrpruxaetin342do2mi
+  '@deck.gl/mapbox': 8.9.6_@deck.gl+core@8.9.4
   '@deck.gl/react': 8.9.4_oqkxgvmjlv2tgo775tmab54r4e
   '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
   '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia
@@ -1461,6 +1463,15 @@ packages:
       '@math.gl/polygon': 3.6.3
       '@math.gl/web-mercator': 3.6.3
       earcut: 2.2.4
+    dev: false
+
+  /@deck.gl/mapbox/8.9.6_@deck.gl+core@8.9.4:
+    resolution: {integrity: sha512-YYukxj2ayDZF3rA7dUGXI20f9NVve1etMcZ0Kj9sJ5cFSYdiitVYcQO84ntAfLM6HHc+ouQoJPcD32EXKfe9yA==}
+    peerDependencies:
+      '@deck.gl/core': ^8.0.0
+    dependencies:
+      '@deck.gl/core': 8.9.4
+      '@types/mapbox-gl': 2.7.10
     dev: false
 
   /@deck.gl/react/8.9.4_oqkxgvmjlv2tgo775tmab54r4e:
