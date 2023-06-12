@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { Brightness4, Brightness7, Menu } from '@mui/icons-material';
 import { ThemeDataStore } from '../theme/ThemeDataStore';
-import { useInstance } from 'react-ioc';
+import { useInstances } from 'react-ioc';
 import { observer } from 'mobx-react-lite';
 import { AppDataStore } from '../stores/AppDataStore';
 
@@ -24,8 +24,10 @@ const StyledHeader = styled(Box)(({ theme }) => ({
 }));
 
 const Header = () => {
-  const appDataStore = useInstance(AppDataStore);
-  const themeDataStore = useInstance(ThemeDataStore);
+  const [appDataStore, themeDataStore] = useInstances(
+    AppDataStore,
+    ThemeDataStore
+  );
 
   const onMenuButtonClick = (
     event: SyntheticEvent<HTMLButtonElement, Event>
