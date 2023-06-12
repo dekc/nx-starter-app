@@ -1,4 +1,4 @@
-import { Box, Paper, Toolbar, useTheme } from '@mui/material';
+import { Box, Paper, Toolbar } from '@mui/material';
 import { styled } from '@mui/system';
 import { useInstance } from 'react-ioc';
 import { ThemeDataStore } from '../theme/ThemeDataStore';
@@ -14,7 +14,6 @@ const StyledFooter = styled(Box)(({ theme }) => {
 });
 
 const Footer = () => {
-  const theme = useTheme();
   const themeDataStore = useInstance(ThemeDataStore);
 
   console.log(themeDataStore.mode);
