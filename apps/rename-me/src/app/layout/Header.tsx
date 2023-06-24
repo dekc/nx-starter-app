@@ -64,3 +64,10 @@ const Header = () => {
 };
 
 export default observer(Header);
+// if (form.lpp && form.lpp !== '' && form.lpp !== undefined) {
+//   lpp = parseFloat(form.lpp);
+//   lpp =
+//     lpp < 1 || lpp > 500
+//       ? 'LPP value cannot be less than 1 or more than 500'
+//       : false;
+// }

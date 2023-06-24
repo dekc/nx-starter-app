@@ -1,0 +1,7 @@
+{
+  "/cgi-bin/mapserv.fcgi": {
+    "target": "https://depth.openseamap.org",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

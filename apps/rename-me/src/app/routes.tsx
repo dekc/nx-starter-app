@@ -1,9 +1,9 @@
 import { AppRoute } from './routes/AppRoutes';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import Maps from './pages/Maps';
-import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
+import { Home } from './pages/Home';
+import { NotFound } from './pages/NotFound';
+import { Maps } from './pages/maps';
+import { Dashboard } from './pages/Dashboard';
+import { Login } from './pages/Login';
 
 const routes: AppRoute[] = [
   {
