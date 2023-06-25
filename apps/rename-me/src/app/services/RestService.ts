@@ -49,7 +49,7 @@ class RestClientService {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiwidHlwIjoiSldUIn0.eyJzdWIiOiJwb3J0b2Z2YW5jb3V2ZXJ2dHNkaGlzdXBwb3J0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IlZhbmNvdXZlciBWVFMgREhJIFN1cHBvcnQiLCJyb2xlcyI6IltcbiAgXCJWVFNcIlxuXSIsImRlYnVnIjoiVHJ1ZSIsIm1vZHVsZXMiOiJbXG4gIFwiVHJhbnNpdHNcIlxuXSIsImNsaWVudGlkIjoiUG9ydE9mVmFuY291dmVyIiwiZGVzY3JpcHRpb24iOiIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2dyb3Vwc2lkIjpbIkR5bmFtaWMtU3VwcG9ydC1BY2Nlc3MiLCJFZGl0b3JzIiwiU3VwcG9ydC1BY2Nlc3MiXSwiZXhwIjoxNjg2Mzc2Mzk5LCJpc3MiOiJkaGlncm91cC5jb20iLCJhdWQiOiJkaGlncm91cC5jb20ifQ.QXtH-EP5TREAtLM8knxmje7a8jttYogqPb-bA2ub_rNRElWEgkaqzwfYB7Ppddg8R342q7bBxPpxmMoMnZBG9Ml1z49TH0ujI-peoO9LjEGHVdbBdVZkNTLX7RjRvh73V9F-oMOnQ6yHyPdrV3B1bxthjX7HupOUWLJlLV2Ryuq7yTkO3DRtAAcvId54YEElmZYOsN-0ed54PBK3Y_Ze-eOP_Z69VJXrhycKu-nahxv-kpWHzkYZDwgxCcdrQSsjdiO7_Wo_ta6PFQZsPUEZnvBWVCnyCmxQbCqxEp0MteT7OBfiS-7VNibu2D-hfMuZFftUbdwQuLzgLNZ-BqRMRw`,
+        Authorization: `Bearer {token>}`, // TODO: pass token
       },
     }).pipe(
       switchMap((response) => {
