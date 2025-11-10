@@ -3,9 +3,11 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/rename-me-e2e/src",
   "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["rename-me"],
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "apps/rename-me-e2e/cypress.config.ts",
         "devServerTarget": "rename-me:serve:development",
@@ -18,13 +20,11 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/rename-me-e2e/**/*.{js,ts}"]
       }
     }
-  },
-  "tags": [],
-  "implicitDependencies": ["rename-me"]
+  }
 }

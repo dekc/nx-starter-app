@@ -4,6 +4,7 @@ import {
   IconButton,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   styled,
   useTheme,
@@ -61,12 +62,10 @@ const SideDrawer = ({ routeList = [] }: SideDrawerProps) => {
       .filter((route) => route.name && route.show)
       .map((route) => {
         return (
-          <ListItem
-            key={route.path}
-            button
-            onClick={() => onClickListItem(route.path)}
-          >
-            <ListItemText primary={route.name} />
+          <ListItem key={route.path} disablePadding>
+            <ListItemButton onClick={() => onClickListItem(route.path)}>
+              <ListItemText primary={route.name} />
+            </ListItemButton>
           </ListItem>
         );
       });

@@ -3,9 +3,10 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/rename-me/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/vite:build",
+      "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -21,7 +22,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/vite:dev-server",
+      "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "rename-me:build"
@@ -38,7 +39,7 @@
       }
     },
     "preview": {
-      "executor": "@nrwl/vite:preview-server",
+      "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "rename-me:build"
@@ -53,20 +54,19 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/apps/rename-me"],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/apps/rename-me"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/rename-me"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/rename-me/**/*.{ts,tsx,js,jsx}"]
       }
     }
-  },
-  "tags": []
+  }
 }
